@@ -1,13 +1,11 @@
 <html>
   <body>
-    <p>Enter an ASIN:</p>
+    <p>输入 ASIN:</p>
     <input id="asin-input" type="text">
-    <button onclick="updateURL('https://m.media-amazon.com/images/P/' + document.getElementById('asin-input').value + '.01.MAIN._SCRM_.jpg')">Update URL</button>
-    <p>Click the link to see an image:</p>
-    <a id="image-link" href="https://m.media-amazon.com/images/P/***** .01.MAIN._SCRM_.jpg">Image Link</a>
+    <button onclick="updateURL('https://m.media-amazon.com/images/P/' + document.getElementById('asin-input').value + '.01.MAIN._SCRM_.jpg')">获取封面</button>
     <script>
       function updateURL(newURL) {
-        document.getElementById("image-link").href = newURL;
+        window.location = newURL;
       }
     </script>
   </body>
