@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <p>输入 ASIN:</p>
+    <input id="asin-input" type="text">
+    <button onclick="updateURL('https://m.media-amazon.com/images/P/' + document.getElementById('asin-input').value + '.01.MAIN._SCRM_.jpg')">获取封面</button>
+    <script>
+      function updateURL(newURL) {
+        window.location = newURL;
+      }
+    </script>
+  </body>
+</html>
