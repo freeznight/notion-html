@@ -1,4 +1,14 @@
-<div id="cover_url" class="clear">
-    <input value="" placeholder="输入电子书的 ASIN 编号 ..." id="asin_numb">
-    <a href="" id="get_url1" class="blue" rel="noopener">获取封面（中亚/美亚，大图）</a> <a href="" id="get_url3" rel="noopener">获取封面（中亚/美亚，小图）</a> <a href="" id="get_url2" rel="noopener">获取封面（中亚，中图）</a>
-</div>
+<html>
+  <body>
+    <p>Enter an ASIN:</p>
+    <input id="asin-input" type="text">
+    <button onclick="updateURL('https://m.media-amazon.com/images/P/' + document.getElementById('asin-input').value + '.01.MAIN._SCRM_.jpg')">Update URL</button>
+    <p>Click the link to see an image:</p>
+    <a id="image-link" href="https://m.media-amazon.com/images/P/***** .01.MAIN._SCRM_.jpg">Image Link</a>
+    <script>
+      function updateURL(newURL) {
+        document.getElementById("image-link").href = newURL;
+      }
+    </script>
+  </body>
+</html>
